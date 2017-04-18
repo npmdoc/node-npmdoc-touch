@@ -1,0 +1,363 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/isaacs/node-touch#readme"
+
+    >touch (v1.0.0)</a>
+</h1>
+<h4>like touch(1) in node</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.touch">module touch</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.touch.touch">
+            function <span class="apidocSignatureSpan"></span>touch
+            <span class="apidocSignatureSpan">(f, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.touch.ftouch">
+            function <span class="apidocSignatureSpan">touch.</span>ftouch
+            <span class="apidocSignatureSpan">(fd, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.touch.ftouchSync">
+            function <span class="apidocSignatureSpan">touch.</span>ftouchSync
+            <span class="apidocSignatureSpan">(fd, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.touch.sync">
+            function <span class="apidocSignatureSpan">touch.</span>sync
+            <span class="apidocSignatureSpan">(f, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.touch.toString">
+            function <span class="apidocSignatureSpan">touch.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.touch.touchSync">
+            function <span class="apidocSignatureSpan">touch.</span>touchSync
+            <span class="apidocSignatureSpan">(f, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.touch.ftouch">module touch.ftouch</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.touch.ftouch.ftouch">
+            function <span class="apidocSignatureSpan">touch.</span>ftouch
+            <span class="apidocSignatureSpan">(fd, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.touch.ftouch.sync">
+            function <span class="apidocSignatureSpan">touch.ftouch.</span>sync
+            <span class="apidocSignatureSpan">(fd, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.touch" id="apidoc.module.touch">module touch</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.touch.touch" id="apidoc.element.touch.touch">
+        function <span class="apidocSignatureSpan"></span>touch
+        <span class="apidocSignatureSpan">(f, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function touch(f, options, cb) {
+  if (typeof options === &#x22;function&#x22;) cb = options, options = null
+  options = validOpts(options)
+  return optionsRef(touch_, f, validOpts(options), cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.touch.ftouch" id="apidoc.element.touch.ftouch">
+        function <span class="apidocSignatureSpan">touch.</span>ftouch
+        <span class="apidocSignatureSpan">(fd, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ftouch(fd, options, cb) {
+  if (typeof options === &#x22;function&#x22;) cb = options, options = null
+  return optionsRef(ftouch_, fd, validOpts(options), cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var touch = require(&#x22;touch&#x22;)
+```
+
+Gives you the following functions:
+
+* `touch(filename, options, cb)`
+* `touch.sync(filename, options)`
+* `touch.<span class="apidocCodeKeywordSpan">ftouch</span>(fd, options, cb)`
+* `touch.ftouchSync(fd, options)`
+
+## Options
+
+* `force` like `touch -f` Boolean
+* `time` like `touch -t &#x3c;date&#x3e;` Can be a Date object, or any parseable
+Date string, or epoch ms number.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.touch.ftouchSync" id="apidoc.element.touch.ftouchSync">
+        function <span class="apidocSignatureSpan">touch.</span>ftouchSync
+        <span class="apidocSignatureSpan">(fd, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ftouchSync = function (fd, options) {
+  return ftouch(fd, options)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+Gives you the following functions:
+
+* `touch(filename, options, cb)`
+* `touch.sync(filename, options)`
+* `touch.ftouch(fd, options, cb)`
+* `touch.<span class="apidocCodeKeywordSpan">ftouchSync</span>(fd, options)`
+
+## Options
+
+* `force` like `touch -f` Boolean
+* `time` like `touch -t &#x3c;date&#x3e;` Can be a Date object, or any parseable
+  Date string, or epoch ms number.
+* `atime` like `touch -a` Can be either a Boolean, or a Date.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.touch.sync" id="apidoc.element.touch.sync">
+        function <span class="apidocSignatureSpan">touch.</span>sync
+        <span class="apidocSignatureSpan">(f, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sync = function (f, options) {
+  return touch(f, options)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var touch = require(&#x22;touch&#x22;)
+```
+
+Gives you the following functions:
+
+* `touch(filename, options, cb)`
+* `touch.<span class="apidocCodeKeywordSpan">sync</span>(filename, options)`
+* `touch.ftouch(fd, options, cb)`
+* `touch.ftouchSync(fd, options)`
+
+## Options
+
+* `force` like `touch -f` Boolean
+* `time` like `touch -t &#x3c;date&#x3e;` Can be a Date object, or any parseable
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.touch.toString" id="apidoc.element.touch.toString">
+        function <span class="apidocSignatureSpan">touch.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.touch.touchSync" id="apidoc.element.touch.touchSync">
+        function <span class="apidocSignatureSpan">touch.</span>touchSync
+        <span class="apidocSignatureSpan">(f, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">touchSync = function (f, options) {
+  return touch(f, options)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.touch.ftouch" id="apidoc.module.touch.ftouch">module touch.ftouch</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.touch.ftouch.ftouch" id="apidoc.element.touch.ftouch.ftouch">
+        function <span class="apidocSignatureSpan">touch.</span>ftouch
+        <span class="apidocSignatureSpan">(fd, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ftouch(fd, options, cb) {
+  if (typeof options === &#x22;function&#x22;) cb = options, options = null
+  return optionsRef(ftouch_, fd, validOpts(options), cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var touch = require(&#x22;touch&#x22;)
+```
+
+Gives you the following functions:
+
+* `touch(filename, options, cb)`
+* `touch.sync(filename, options)`
+* `touch.<span class="apidocCodeKeywordSpan">ftouch</span>(fd, options, cb)`
+* `touch.ftouchSync(fd, options)`
+
+## Options
+
+* `force` like `touch -f` Boolean
+* `time` like `touch -t &#x3c;date&#x3e;` Can be a Date object, or any parseable
+Date string, or epoch ms number.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.touch.ftouch.sync" id="apidoc.element.touch.ftouch.sync">
+        function <span class="apidocSignatureSpan">touch.ftouch.</span>sync
+        <span class="apidocSignatureSpan">(fd, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sync = function (fd, options) {
+  return ftouch(fd, options)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var touch = require(&#x22;touch&#x22;)
+```
+
+Gives you the following functions:
+
+* `touch(filename, options, cb)`
+* `touch.<span class="apidocCodeKeywordSpan">sync</span>(filename, options)`
+* `touch.ftouch(fd, options, cb)`
+* `touch.ftouchSync(fd, options)`
+
+## Options
+
+* `force` like `touch -f` Boolean
+* `time` like `touch -t &#x3c;date&#x3e;` Can be a Date object, or any parseable
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
