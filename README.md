@@ -1,6 +1,6 @@
 # npmdoc-touch
 
-#### api documentation for  [touch (v1.0.0)](https://github.com/isaacs/node-touch#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-touch.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-touch) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-touch.svg)](https://travis-ci.org/npmdoc/node-npmdoc-touch)
+#### basic api documentation for  [touch (v1.0.0)](https://github.com/isaacs/node-touch#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-touch.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-touch) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-touch.svg)](https://travis-ci.org/npmdoc/node-npmdoc-touch)
 
 #### like touch(1) in node
 
